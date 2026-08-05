@@ -1,0 +1,121 @@
+# Top 15 Daily Git/GitHub Commands
+
+## Basic Workflow
+```bash
+# Check status of working directory
+git status
+
+# Stage changes (specific file or all)
+git add <file>
+git add .
+
+# Commit staged changes
+git commit -m "Clear commit message"
+
+# Push to remote
+git push origin <branch>
+
+# Pull latest changes
+git pull origin <branch>
+```
+
+## Branch Management
+```bash
+# List all branches
+git branch -a
+
+# Create and switch to new branch
+git checkout -b <branch-name>
+
+# Switch to existing branch
+git checkout <branch-name>
+
+# Delete local branch
+git branch -d <branch-name>
+
+# Delete remote branch
+git push origin --delete <branch-name>
+```
+
+## Sync & Update
+```bash
+# Fetch without merging
+git fetch origin
+
+# Rebase onto latest main
+git rebase origin/main
+
+# Stash uncommitted changes
+git stash
+git stash pop
+```
+
+## Inspection
+```bash
+# View commit history (compact)
+git log --oneline -10
+
+# Show changes in last commit
+git show
+
+# Diff working vs staged
+git diff
+git diff --staged
+
+# Show remote URLs
+git remote -v
+```
+
+## Fixing Mistakes
+```bash
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+
+# Undo last commit (discard changes)
+git reset --hard HEAD~1
+
+# Amend last commit message
+git commit --amend -m "New message"
+
+# Discard changes to a file
+git checkout -- <file>
+```
+
+## GitHub CLI (gh) - Essential
+```bash
+# Create PR
+gh pr create --title "Title" --body "Description"
+
+# List PRs
+gh pr list
+
+# Checkout PR locally
+gh pr checkout <number>
+
+# Merge PR
+gh pr merge --squash
+
+# View repo in browser
+gh repo view --web
+
+# Clone repo
+gh repo clone owner/repo
+```
+
+## Pro Tips
+```bash
+# Pretty log graph
+git log --oneline --graph --all --decorate
+
+# Search commits by message
+git log --grep="keyword"
+
+# Find who changed a line
+git blame <file>
+
+# Clean untracked files
+git clean -fd
+```
+
+---
+*Keep this handy for daily Git workflow!*
